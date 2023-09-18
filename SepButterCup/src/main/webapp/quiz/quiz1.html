@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div class="container col-md-11">
+        <h1>개발자 지원서</h1>
+        <span>HTML, CSS, JavaScript에 대한 기술적 이해와 경험이 있는 분을 찾습니다</span>
+        <br><br>
+        <form action="#" method="get">
+            <div class="form-row row">
+                <h3>개인정보</h3>
+                <br><br>
+                <div class="form-group col-md-5">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" class="form-control" placeholder="공백없이 입력해주세요">
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="name">연락처</label>
+                    <input type="tel" id="name" class="form-control" placeholder="010">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="name">&nbsp</label>
+                    <input type="tel" id="name" class="form-control">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="name">&nbsp</label>
+                    <input type="tel" id="name" class="form-control">
+                </div>
+                <div class="form-check col-md-1"><br>
+                    <label for="man">남자</label>
+                    <input type="radio" name="sex" id="man" class="form-check-input">
+                </div>
+                <div class="form-check col-md-1"><br>
+                    <label for="woman">여자</label>
+                    <input type="radio" name="sex" id="woman" class="form-check-input">
+                </div>
+            </div>
+            <br>
+            <h3>지원 분야</h3><br>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="web" id="web">
+                <label for="web">웹 퍼블리싱</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="a" id="a">
+                <label for="a">웹 어플리케이션 개발</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="b" id="b">
+                <label for="b">개발 환경 개선</label>
+            </div><br><br>
+            <h3>지원동기</h3>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1"></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="본사 지원 동기를 간략히 써 주세요"></textarea>
+            </div>
+            <br>
+            <button class="btn btn-primary" type="submit">접수하기</button>
+            <button class="btn btn-primary" type="reset">다시쓰기</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
