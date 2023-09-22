@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <input type="submit" value="결과" onclick="Test()">
+    <span>검사 결과</span><br>
+    <input id="result">??</span>
+    <script>
+
+        
+        
+
+        function Test() {
+            var regex = /[ㄱ-ㅎㅏ-ㅣ가-힣]/g;
+            var text = document.getElementById('text').value;
+            var r = regex.test(text); 
+            console.log(regex);
+            console.log(r);
+            console.log(text);
+            if(r){
+                document.getElementById('result').value = "성공";
+            } else {
+                document.getElementById('result').value = "실패";
+            }
+
+        }
+
+    </script>
+</body>
+</html>

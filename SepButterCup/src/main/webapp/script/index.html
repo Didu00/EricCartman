@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function truncate(str, maxlength) {
+            var result;
+
+            result = str.substr(0,maxlength-1);
+            result += '...';
+            return result;
+        }
+        
+        var string = 'GoodNodeJs'
+
+        console.log(truncate(string,5));
+
+    </script>
+</body>
+</html>
