@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<style>
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+    }
+    .text {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="name_box">
+        <div class="text"></div><br>
+        <span class="result"></span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="text" name="taza" id="taza">
+
+
+
+    
+
+    <script>
+        // 타자를 칠때마다 text 위치에 
+        // result 값을 비교하며 맞으면 위 텍스트를 검정색으로 바꾼다.
+
+        $(document).ready(function () {
+            var rev = "동해물과 백두산이 마르고 닭도록 하느님이 보우하사 우리나라 만세";
+            var textlist = rev.split("");
+
+            for(var i = 0; i < textlist.length; i++){
+                $('.text').append(`<span class='${i}'>${textlist[i]}</span>`);
+            }
+
+            
+            $('#taza').keyup(function(){ // 타자 칠때마다
+
+                var result = $('#taza').val().split("");    
+                var a = $('#taza').val();
+                var num = 0;
+                for(var i= 0; i < textlist.length;i++){
+                    if(result[i] == textlist[i]){
+                        $(`.${i}`).css({"color":"black"});
+                    } else {
+                        $(`.${i}`).css({"color":"red"});
+                    }
+                }
+                $('.result').text(a);
+            })
+
+        })
+    </script>
+
+</body>
+
+</html> 
