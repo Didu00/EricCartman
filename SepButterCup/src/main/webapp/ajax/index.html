@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+
+        let url = "https://jsonplaceholder.typicode.com/users";
+
+        $(function(){
+            $("button").click(function(){
+                $.getJSON(url, function(data) {
+                    $.each(data, function(index, user){
+                        $("#result").append(
+                            `id : ${user.id}, name : ${user.name}, company : ${user.company}`
+                        )
+                    })
+                });
+            })
+        });
+    </script>
+</head>
+<body>
+    <button>ㅎㅎ</button>
+    <div id="result"></div>
+</body>
+</html>
